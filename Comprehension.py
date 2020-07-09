@@ -19,3 +19,6 @@ i = [2 * n for n in (0,1,2) if n > 0]
 # Print only odd numbers in the list
 odd = [num for num in [1, 2, 3, 4, 6, 8, 10, 12, 13, 17, 20, 22, 35, 27, 32, 47] if num % 2]
 # print(odd)
+
+my_list = [[m,n] for m in (5,6) for n in (3,4)]
+# print(my_list)
