@@ -22,7 +22,7 @@ for i in range(0, 10):
 # When we reach the end and there is no more data to be returned,
 # it will raise the StopIteration Exception
 
-a = int(input('Give amount: '))
+# a = int(input('Give amount: '))
 
 def fib():
     a, b = 0, 1
@@ -33,5 +33,5 @@ def fib():
 b = fib()
 b.__next__()
 
-for i in range(a):
-    print(b.__next__())
+# for i in range(a):
+#     print(b.__next__())
