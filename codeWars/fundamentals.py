@@ -63,3 +63,38 @@ def rmv_smallest(numbers):
     if len(numbers) <= 1: return []
         numbers.remove(min(numbers))
         return numbers
+    
+    
+# Make sure that k is greater than zero and less than the
+    # length of the array of strings. Otherwise return an empty string
+    if k <= 0 or k > len(strarr):
+        return ''
+
+    # Finding the longest string consisting of k consecutive
+    # strings is equivalent to finding the maximum sum of
+    # k consecutive elements of an array that represents the
+    # lengths of an array of strings.
+
+    # star_lengths represents a list of lengths of the initial
+    # array of strings.
+    starr_lengths = list(map(len, strarr))
+    # Find the maximum sum of k consecutive elements
+    # requires keeping a temperary maximum length.
+    temp_max_len = 0
+    # We also need to keep the position of the first element of
+    # each group.
+    position = 0
+
+    # Scan the whole list of lengths except the final k elements
+    for p in range(len(starr_lengths) - (k - 1)):
+        # We need to find the sum of the current set of elements
+        # starting at position p
+        set_sum = 0
+        for i in range(k):
+            set_sum += starr_lengths[p+i]
+        
+        if set_sum > temp_max_len:
+            temp_max_len = set_sum
+            position = p
+
+    return ''.join([s for s in strarr[position:position+k]])
