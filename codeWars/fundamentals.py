@@ -107,3 +107,23 @@ def stray(arr):
     for x in arr:
         if arr.count(x) == 1:
             return x
+        
+        
+        
+        
+# The main idea is to count all the occurring characters in a string. If you have a string like aba, 
+# then the result should be {'a': 2, 'b': 1}.
+
+# What if the string is empty? Then the result should be empty object literal, {}.
+
+def count(string):
+    if string=="":
+        return {}
+    else:
+        dict={}
+        for i in string:
+            if i not in dict:
+                dict[i]=1
+            else:
+                dict[i]+=1
+        return dict
