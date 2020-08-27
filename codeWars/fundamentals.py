@@ -127,3 +127,9 @@ def count(string):
             else:
                 dict[i]+=1
         return dict
+    
+# Complete the function/method so that it returns the url with anything after the anchor (#) removed.
+def remove_url_anchor(url):
+    splt = url.split('#',1)
+    sub = splt[0]
+    return sub
