@@ -137,3 +137,7 @@ def remove_url_anchor(url):
 # Refactored method
 def remove_url_anchor(url):
     return url.partition('#')[0]
+
+# Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string).
+def solution(string, ending):
+    return string.endswith(ending)
