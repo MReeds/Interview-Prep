@@ -84,8 +84,8 @@ function_to_be_used = hello_decorator(function_to_be_used)
     
 # calling the function  
 function_to_be_used()  
-Output:
 
-Hello, this is before function execution
-This is inside the function !!
-This is after function execution
+
+# A closure is a nested function which has access to a free variable from an enclosing 
+# function that has finished its execution. it is a nested function. ... it has access 
+# to a free variable in outer scope. it is returned from the enclosing function.
