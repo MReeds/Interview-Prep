@@ -83,3 +83,15 @@ Here are some of the most commonly used methods: '''
 # .assertIsNone(x)	      x is None
 # .assertIn(a, b)	       a in b
 # .assertIsInstance(a, b)	isinstance(a, b)
+
+
+''' The Python application that executes your test code, checks the assertions, 
+    and gives you test results in your console is called the test runner.
+
+At the bottom of test.py, you added this small snippet of code: '''
+
+# if __name__ == '__main__':
+#     unittest.main()
+''' This is a command line entry point. It means that if you execute the script alone 
+     by running python test.py at the command line, it will call unittest.main(). 
+     This executes the test runner by discovering all classes in this file that inherit from unittest.TestCase.'''
