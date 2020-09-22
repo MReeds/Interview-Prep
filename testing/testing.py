@@ -71,3 +71,15 @@ sum = target.sum
 The benefit of using __import__() is that you don’t have to turn your project folder into a package,
 and you can specify the file name. This is also useful if your filename collides with any standard library packages. 
 For example, math.py would collide with the math module.'''
+
+''' unittest comes with lots of methods to assert on the values, types, and existence of variables. 
+Here are some of the most commonly used methods: '''
+
+# Method	Equivalent to
+# .assertEqual(a, b)	    a == b
+# .assertTrue(x)	        bool(x) is True
+# .assertFalse(x)        bool(x) is False
+# .assertIs(a, b)	       a is b
+# .assertIsNone(x)	      x is None
+# .assertIn(a, b)	       a in b
+# .assertIsInstance(a, b)	isinstance(a, b)
