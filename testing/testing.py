@@ -59,3 +59,15 @@ Writing the TestSum test case example for pytest would look like this: '''
 
 # def test_sum_tuple():
 #    assert sum((1, 2, 2)) == 6, "Should be 6"
+
+''' Note: What if your application is a single script?
+
+You can import any attributes of the script, such as classes, functions, 
+and variables by using the built-in __import__() function. Instead of from my_sum import sum, you can write the following:
+
+target = __import__("my_sum.py")
+sum = target.sum
+
+The benefit of using __import__() is that you don’t have to turn your project folder into a package,
+and you can specify the file name. This is also useful if your filename collides with any standard library packages. 
+For example, math.py would collide with the math module.'''
